@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <title>Welcome to view </title>
+</head>
+<body>
+<main id="app">
+  <h4>{{welcome}}</h4>
+
+  <ul>
+    <li v-for= "movie in movieData">
+      <!-- <p v-on:click="logFruit">
+        {{fruit.name}} is {{fruit.flavour}}
+      </p> -->
+      <a :href="movie.vidSource" v-on:click="logMovie">
+        <img :src="'images/'+ movie.thumb" alt="" />
+      </a>
+    </li>
+  </ul>
+
+  <section>
+    <h4>{{moviename}}</h4>
+    <p>
+      {{moviedesc}}
+    </p>
+  </section>
+</main>
+
+
+
+
+
+
+
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
