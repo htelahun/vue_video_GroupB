@@ -2,7 +2,7 @@ const vm = new Vue ({
   el : "#app",
 
 data : {
-    
+
     welcome : "Welcome to your first vue app",
 
     movieData : [
@@ -15,7 +15,9 @@ data : {
 
   moviedesc : "movie desc here",
 
-  moviesource : "null"
+  moviesource : "",
+
+  showDetails: false
   },
 
   methods : {
@@ -34,7 +36,19 @@ data : {
     this.moviedesc = currentData[0].description;
     this.moviesource = dataKey;
 
-    }
+    this.showDetails = true;
+    setTimeout(function () {window.scrollTo(0,1200);}, 500);
+
+  },
+
+  scrollBackUp(){
+window.scrollTo(0,0);
+this.showDetails= false;
+this.movieSource= null ;
+
+  }
+
+
   }
 
 });

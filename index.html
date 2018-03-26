@@ -23,11 +23,18 @@
     </li>
   </ul>
 
-  <section>
+  <section class="hidden-movies" :class="{'show-movie' : showDetails }">
     <h4>{{moviename}}</h4>
+    <video :src="'video/' + moviesource " autoplay >
+
+    </video>
     <p>
       {{moviedesc}}
     </p>
+
+    <div class="up-arrow">
+      <span v-on:click="scrollBackUp" :class="{'show-scroller' : showDetails}">^</span>
+    </div>
   </section>
 </main>
 
